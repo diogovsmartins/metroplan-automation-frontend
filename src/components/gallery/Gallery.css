@@ -1,0 +1,18 @@
+#gallery-div{
+    display: flex;
+    background-color: #F2F2F2;
+    padding: 0.5vw;
+    flex-direction: column;
+    height: 100%;
+}
+
+#gallery-content-wrapper{
+    display: flex;
+}
+
+#gallery-product-card-div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex: 60%;
+}
