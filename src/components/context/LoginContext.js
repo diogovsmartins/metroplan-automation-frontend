@@ -1,5 +1,3 @@
 import { createContext } from "react";
 
-export const UserDetailsContext=createContext({
-    userRoles:""
-})
+export const UserDetailsContext=createContext()

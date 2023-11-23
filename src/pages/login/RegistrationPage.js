@@ -12,7 +12,6 @@ export default function RegistrationPage(){
     return(
         <>
             <Header />
-            <Navbar />
             <RegistrationForm />
             <Footer />
         </>

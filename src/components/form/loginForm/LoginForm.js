@@ -7,7 +7,7 @@ import { UserDetailsContext } from "../../context/LoginContext";
 export default function LoginForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const userContext=useContext(UserDetailsContext)
+  const userContext = useContext(UserDetailsContext)
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -29,8 +29,10 @@ export default function LoginForm() {
     });
     const fetchedUserRoles = await requestUserRoles.json();
     
-    userContext.userRoles = fetchedUserRoles.roles;
+    userContext.setUserRoles(fetchedUserRoles)
     console.log(`Roles fetched: ${JSON.stringify(userContext)}`);
+    setPassword('')
+    setEmail('')
   }
 
   return (

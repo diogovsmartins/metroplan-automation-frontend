@@ -12,7 +12,6 @@ export default function LoginPage(){
     return(
         <>
             <Header />
-            <Navbar />
             <LoginForm />
             <Footer />
         </>

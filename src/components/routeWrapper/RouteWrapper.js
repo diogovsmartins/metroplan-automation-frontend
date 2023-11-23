@@ -1,30 +1,27 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import LoginPage from "../../pages/login/LoginPage";
 import { UserDetailsContext } from "../context/LoginContext";
+import HomePage from "../../pages/home/Home";
 
 export default function ValidateLogin(props){
     const wantedCredentials=['COORDINATOR','PROFESSOR']
-    
-    const userContext=useContext(UserDetailsContext)
-    const [authenticated, setAuthenticated] = useState(false);
+    const userContext = useContext(UserDetailsContext)
 
-    function isAuthenticated(){
-       const userDetailState = userContext.userRoles;
-       console.log("User Roles from Wrapper:", userContext.userRoles);
-       if(userDetailState.includes(wantedCredentials[0]) || userDetailState.includes(wantedCredentials[1])){
-         setAuthenticated(true);
-       }else{
-        setAuthenticated(false);
-       }
-       console.log("authenticated", authenticated);
-       return authenticated;
+    let authenticated = false;
+
+    if (userContext.userRoles) {
+        if (userContext.userRoles.roles == wantedCredentials[0] || userContext.userRoles.roles == wantedCredentials[1]) {
+            authenticated = true
+        } else {
+            authenticated = false
+        }
     }
 
     return(
         <>
             {
-                isAuthenticated === true 
-                ? props.element
+                authenticated 
+                ? <HomePage />
                 : <LoginPage/>
             }
         </>
