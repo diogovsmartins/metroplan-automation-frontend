@@ -16,7 +16,9 @@ export default function LoginForm() {
       email: email,
       password: password
       }
-      fetchData(user)
+      fetchData(user);
+      setPassword('');
+      setEmail('');
   }
 
   async function fetchData(user){
@@ -31,8 +33,6 @@ export default function LoginForm() {
     
     userContext.setUserRoles(fetchedUserRoles)
     console.log(`Roles fetched: ${JSON.stringify(userContext)}`);
-    setPassword('')
-    setEmail('')
   }
 
   return (
