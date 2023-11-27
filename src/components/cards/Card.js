@@ -15,7 +15,7 @@ export default function Card({document}){
         <div>
             <img 
             className="product-image-style"
-            src="https://www.ufpb.br/cdn/icons/document.png/@@images/image.png"
+            src="https://www.computerhope.com/jargon/d/doc.png"
             alt="">
             </img>
         </div>
