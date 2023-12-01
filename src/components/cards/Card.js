@@ -15,7 +15,7 @@ export default function Card({document}){
         <div>
             <img 
             className="product-image-style"
-            src="https://www.computerhope.com/jargon/d/doc.png"
+            src= { `data:image/png;base64,${document.base64Image}`}
             alt="">
             </img>
         </div>
