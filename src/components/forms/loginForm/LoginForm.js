@@ -31,7 +31,8 @@ export default function LoginForm() {
     });
     const fetchedUserRoles = await requestUserRoles.json();
     
-    userContext.setUserRoles(fetchedUserRoles)
+    userContext.setUserRoles(fetchedUserRoles);
+    localStorage.setItem("roles", fetchedUserRoles.roles);
     console.log(`Roles fetched: ${JSON.stringify(userContext)}`);
   }
 
