@@ -9,7 +9,6 @@ export default function SinglePageDocument(){
 
     const locationData=useLocation();
 
-    console.log("Data received when routed from /documents", stateData);
 
     return(
        <>
