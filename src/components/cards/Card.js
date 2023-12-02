@@ -6,12 +6,13 @@ export default function Card({document}){
     console.log('document from inside card.', document)
     const navigate=useNavigate();
 
-    function handleClick(id){
-      navigate(`/documents/${id}`)
+    function handleClick(document){
+        
+        navigate(`/documents/${document.id}`, {state:document})
     }
 
     return(
-    <div className="product-wrapper-div" key={document.id}  onClick={() => handleClick(document.id)}>
+    <div className="product-wrapper-div" key={document.id}  onClick={() => handleClick(document)}>
         <div>
             <img 
             className="product-image-style"

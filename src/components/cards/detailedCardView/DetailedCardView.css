@@ -1,0 +1,38 @@
+#detailed-card-view-style{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#image-div{
+    align-self: center;
+    margin-top: 10px;
+    flex-direction: column;
+}
+
+#image-style{
+    border: 1px solid black;
+    object-fit: cover; 
+    max-width: 50vw;
+}
+
+#details-style-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#download-button-style{
+    color: white;
+    background-color: black;
+    width: 15vw;
+    height: 8vh;
+    border-radius: 5px;
+    border: none;
+    margin: 5px;
+}
+
+#download-button-style:hover{
+    cursor: pointer;
+    box-shadow: 0px 5px 5px rgb(117, 117, 117);
+}

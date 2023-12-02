@@ -8,6 +8,7 @@ import AdminPage from './pages/admin/AdminPage';
 import DocumentsPage from './pages/documents/DocumentsPage';
 import SubmitDocumentPage from './pages/documents/SubmitDocumentPage';
 import HomePage from './pages/home/Home';
+import SinglePageDocument from './pages/documents/SingleDocumentPage';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path='/admin' element ={ <AdminPage /> }/>
           <Route path='/documents' element ={ <ValidateLogin Children={<DocumentsPage />} /> }/>
           <Route path='/documents/submission' element ={ <ValidateLogin Children={ <SubmitDocumentPage />} /> }/>
+          <Route path='/documents/:id' element={ <ValidateLogin Children={ <SinglePageDocument /> }/> }/>
         </Routes>
       </BrowserRouter>
     </UserDetailsContext.Provider>
