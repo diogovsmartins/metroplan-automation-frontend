@@ -13,6 +13,8 @@
 #gallery-product-card-div{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    
+    padding: 5%;
+    justify-content: space-between;
     flex: 60%;
 }
